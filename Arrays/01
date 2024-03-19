@@ -1,0 +1,35 @@
+2-D Arrays / Multidimenshional arrays
+
+import java.util.*;
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int[][] arr = new int[3][3];
+		System.out.println(arr.length);
+		//input
+		for(int row=0;row<arr.length;row++){
+		    for(int col=0;col<arr[row].length;col++){
+		        arr[row][col]=sc.nextInt();
+		    }
+		}
+		//output
+		for(int[] a : arr){    //enhanced for-loop
+		    System.out.println(Arrays.toString(a));
+		}
+	}
+}
+
+/*input:-
+3
+1 2 3 4 5 6 7 8 9
+
+output:-
+[1,2,3]
+[4,5,6]
+[7,8,9]
+*/
+
+/* To use Arrays.toString we need to import java.util.Arrays OR java.util.* 
+because Arrays class lives in package java.util*/
